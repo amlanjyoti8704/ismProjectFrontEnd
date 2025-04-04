@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 function Play() {
   const [inputText, setInputText] = useState('');
   const [sentiment, setSentiment] = useState(null);
   const [loading, setLoading] = useState(false);
+  const textareaRef = useRef(null);
 
-  const handleSubmit = async () => {
+    useEffect(() => {
+    if (textareaRef.current) {
+        textareaRef.current.style.height = "auto"; // Reset height
+        textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`; // Set to content height
+    }
+    }, [inputText]);
+
+    const handleSubmit = async () => {
     if (!inputText) return;
     setLoading(true);
 
@@ -37,12 +45,13 @@ function Play() {
       </h1>
 
       <div className="w-[80vw] sm:w-[70vw] lg:w-full max-w-4xl flex flex-col md:flex-row gap-4 md:gap-6 items-center">
-        <input
-          type="text"
+        <textarea
+          ref={textareaRef}
           placeholder="Enter your sentence..."
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
-          className="w-full py-3 px-4 rounded-lg bg-gray-700 border border-gray-600 text-white font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300"
+          rows={1}
+          className="w-full py-3 px-4 rounded-lg bg-gray-700 border border-gray-600 text-white font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-300 resize-none overflow-hidden"
         />
         <button
           onClick={handleSubmit}
@@ -56,8 +65,8 @@ function Play() {
       {sentiment && (
         <div className="mt-8 text-white text-xl">
           Sentiment:{" "}
-          <span className={`font-bold ${sentiment === 'positive' ? 'text-green-400' : 'text-red-400'}`}>
-            {sentiment}
+          <span className={`font-bold ${sentiment === 'positive' ? 'text-green-400' : sentiment=== 'negative' ? 'text-red-400' : 'text-gray-500'}`}>
+            {sentiment.toUpperCase()}
           </span>
         </div>
       )}
