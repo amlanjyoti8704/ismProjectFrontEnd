@@ -36,7 +36,7 @@ const Footer = () => {
                     <h2 className="mb-6 text-sm font-semibold text-white uppercase">Follow us</h2>
                     <ul className="text-gray-400 font-medium">
                         <li className="mb-4">
-                            <NavLink to="https://github.com/amlanjyoti8704" target="_blank" className={({isActive})=> `${isActive ? "text-orange-700" : "text-gray-400"} hover:underline hover:text-orange-700` } >
+                            <NavLink to="https://github.com/sahasranshuu/Hackfest-Event-Sentiment-Analysis" target="_blank" className={({isActive})=> `${isActive ? "text-orange-700" : "text-gray-400"} hover:underline hover:text-orange-700` } >
                                 Github
                             </NavLink>
                         </li>

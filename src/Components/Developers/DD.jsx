@@ -19,30 +19,30 @@ const developers = [
         instagram: "https://www.instagram.com/amlan._.jyoti/", 
         description: `I’m Amlan Jyoti, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
       },
-      { 
-        name: "Abhas Singh", 
-        role: "Backend Developer", 
-        img: "../src/assets/image copy.png", 
-        linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
-        instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
-        description: `I’m Abhas Singh, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
-      },
-      { 
-        name: "Yash Shekhar", 
-        role: "UI-UX Designer", 
-        img: "../src/assets/image copy.png", 
-        linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
-        instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
-        description: `I’m Yash Shekhar, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
-      },
-      { 
-        name: "Shubham Raj Verma", 
-        role: "Backend Developer", 
-        img: "../src/assets/image copy.png", 
-        linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
-        instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
-        description: `I’m Shubham Raj Verma, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
-      },
+      // { 
+      //   name: "Abhas Singh", 
+      //   role: "Backend Developer", 
+      //   img: "../src/assets/image copy.png", 
+      //   linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
+      //   instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
+      //   description: `I’m Abhas Singh, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
+      // },
+      // { 
+      //   name: "Yash Shekhar", 
+      //   role: "UI-UX Designer", 
+      //   img: "../src/assets/image copy.png", 
+      //   linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
+      //   instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
+      //   description: `I’m Yash Shekhar, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
+      // },
+      // { 
+      //   name: "Shubham Raj Verma", 
+      //   role: "Backend Developer", 
+      //   img: "../src/assets/image copy.png", 
+      //   linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
+      //   instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
+      //   description: `I’m Shubham Raj Verma, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
+      // },
   ]
 
 export default function DevelopersPage() {
@@ -67,8 +67,9 @@ export default function DevelopersPage() {
         </h1>
   
         {/* Developer Cards */}
-        <div className="relative z-10 max-w-7xl w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-center">
+        <div className="relative z-10 max-w-7xl w-full mx-auto px-4">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center"> */}
+          <div className="flex flex-wrap justify-center gap-8 max-w-7xl w-full mx-auto px-4">
             {developers.map((dev, index) => (
               <div
                 key={index}

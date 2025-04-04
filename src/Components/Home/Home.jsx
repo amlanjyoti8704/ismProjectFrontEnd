@@ -1,5 +1,6 @@
 import React from 'react'
 import Design from '../../Spline/Design.jsx'
+import CurvedLine from '../CurvedLine/CurvedLine.jsx'
 
 function Home() {
     return (
@@ -32,6 +33,7 @@ function Home() {
 
             </div>
             </section>
+            <CurvedLine />
             <div>
                 <h1 className='text-center text-3xl font-bold mt-10'>
                     <span className='bg-gradient-to-r from-pink-700 to-red-500 text-transparent bg-clip-text'>
