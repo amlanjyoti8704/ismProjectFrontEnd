@@ -38,7 +38,7 @@ export default function ContactUs() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Acme Inc, Street, State, Postal Code
+                                    BIT Mesra, Ranchi, Jharkhand, 835215
                                 </div>
                             </div>
 
@@ -60,7 +60,7 @@ export default function ContactUs() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +44 1234567890
+                                    +91 72958 83411
                                 </div>
                             </div>
 
@@ -82,7 +82,8 @@ export default function ContactUs() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    info@acme.org
+                                    amlanjyoti3345@gmail.com
+                                    sahasranshubehera@gmail.com
                                 </div>
                             </div>
                         </div>
