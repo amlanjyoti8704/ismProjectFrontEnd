@@ -6,17 +6,17 @@ const developers = [
     { 
       name: "Sahasranshu Behera", 
       role: "Tech Team Lead", 
-      img: "../src/assets/image copy.png", 
-      linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
-      instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
+      img: "../src/assets/image copy 2.png", 
+      linkedin: "https://www.linkedin.com/in/sahasranshu-behera-b961a519a/", 
+      instagram: "https://www.instagram.com/somuwuu/", 
       description: `I’m Sahasranshu Behera, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
     },
     { 
         name: "Amlan Jyoti", 
         role: "Frontend Developer", 
         img: "../src/assets/image copy.png", 
-        linkedin: "https://www.linkedin.com/in/manoj-kumar-1a3765254/", 
-        instagram: "https://www.instagram.com/infinite_realm_?igsh=dW5jZHdsZzV0ZG12", 
+        linkedin: "https://www.linkedin.com/in/amlan-jyoti-a0013717b/", 
+        instagram: "https://www.instagram.com/amlan._.jyoti/", 
         description: `I’m Amlan Jyoti, a passionate software developer with a deep interest in AI and Machine Learning. I constantly learn and innovate, exploring diverse projects to harness technology for meaningful impact.`
       },
       { 

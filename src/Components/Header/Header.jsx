@@ -1,9 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { FiMenu, FiX } from 'react-icons/fi'
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false)
+    const menuRef = useRef(null)
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsOpen(false)
+            }
+        }
+
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside)
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [isOpen])
     return (
         <>
         <header className='shadow sticky top-0 z-50 bg-black'>
@@ -21,7 +40,9 @@ function Header() {
                             />
                         </Link>
                     </div>
-                    <div className={`md:flex flex-col md:flex-row md:space-x-10 md:items-center 
+                    <div 
+                    ref={menuRef}
+                    className={`md:flex flex-col md:flex-row md:space-x-10 md:items-center 
                                     absolute md:relative md:right-0 md:ml-auto top-0 left-0 w-[40vw] md:w-auto 
                                     h-screen md:h-auto bg-gray-950 md:bg-transparent p-7 pt-10 md:p-0 
                                     transition-transform duration-300 ease-in-out 
