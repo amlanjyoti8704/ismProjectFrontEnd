@@ -81,3 +81,12 @@ function Play() {
 }
 
 export default Play;
+
+// function Play(){
+//     return(
+//         <>
+//             <h1>Hello</h1>
+//         </>
+//     )
+// }
+// export default Play;

@@ -1,6 +1,8 @@
 import React from 'react'
 import Design from '../../Spline/Design.jsx'
 import CurvedLine from '../CurvedLine/CurvedLine.jsx'
+import { NavLink } from 'react-router-dom'
+import Dashboard from '../Dashboard/Dashboard.jsx'
 
 function Home() {
     return (
@@ -30,24 +32,13 @@ function Home() {
                         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black pointer-events-none"></div>
                     </div>
                 </div>
-
             </div>
             </section>
             <CurvedLine />
             <div>
-                <h1 className='text-center text-3xl font-bold mt-10'>
-                    <span className='bg-gradient-to-r from-pink-700 to-red-500 text-transparent bg-clip-text'>
-                        DashBooard_Area
-                    </span>
-                </h1>
-                <div className='flex justify-center items-center'>
-                    <div className='bg-gray-800 rounded-xl h-100 w-100 mt-20 mb-20'>
-
-                    </div>
-                </div>
-        
-                
+                <Dashboard />
             </div>
+            
         </>
     )
 }

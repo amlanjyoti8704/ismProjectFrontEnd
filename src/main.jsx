@@ -10,12 +10,15 @@ import DevelopersPage from './Components/Developers/DD.jsx'
 import ContactUs from './Components/ContactUs/ContactUs.jsx'
 import User from './Components/User/User.jsx'
 import Play from './Components/Play/Play.jsx'
+import Dashboard from './Components/Dashboard/Dashboard.jsx'
 
 
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route path='' element={<Home/>}/>
+      <Route path='' element={<Home/>}>
+        <Route path='dashboard' element={<Dashboard/>}/>
+      </Route>
       <Route path='about' element={<About/>}/>
       <Route path='developers' element={<DevelopersPage/>}/>
       <Route path='user/:userid' element={<User/>}/>
