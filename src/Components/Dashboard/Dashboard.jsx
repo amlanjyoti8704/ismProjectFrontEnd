@@ -85,7 +85,6 @@ function Dashboard() {
                 {
                    (
                     <PieChart>
-                        <Tooltip />
                         <Pie
                             data={data}
                             dataKey="value"
@@ -93,17 +92,20 @@ function Dashboard() {
                             cx="50%"
                             cy="50%"
                             outerRadius={120}
-                            innerRadius={60} // creates donut look (adds depth)
+                            innerRadius={60}
                             fill="#f97316"
                             label={renderCustomLabel}
-                            >
+                            isAnimationActive={false} // optional: disables animation
+                            activeIndex={-1} // disables highlight
+                            activeShape={null} // disables that annoying rectangle
+                        >
                             {data.map((_, index) => (
-                                <Cell
+                            <Cell
                                 key={`cell-${index}`}
                                 fill={COLORS[index % COLORS.length]}
-                                stroke="#1f2937" // dark stroke for 3D-ish border
+                                stroke="#1f2937"
                                 strokeWidth={2}
-                                />
+                            />
                             ))}
                         </Pie>
                     </PieChart>
@@ -139,7 +141,7 @@ function Dashboard() {
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="name" />
                       <YAxis />
-                      <Tooltip />
+                      {/* <Tooltip /> */}
                       <Bar dataKey="value" fill="#f995" radius={[10, 10, 0, 0]} />
                     </BarChart>
                 )
